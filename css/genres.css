@@ -1,0 +1,91 @@
+/*Aplica el color segun el genero 
+*/
+.genre.alternative:hover {
+  color: #478903 !important;
+  /* Unknown*/ }
+
+.genre.blues:hover {
+  color: #82B8FF !important;
+  /* Light Blue*/ }
+
+.genre.classical:hover {
+  color: #F3DCA7 !important;
+  /* Peach*/ }
+
+.genre.downtempo:hover {
+  color: #567432 !important;
+  /* Peach*/ }
+
+.genre.electronic:hover {
+  color: #55F3FF !important;
+  /* Cyan*/ }
+
+.genre.experimental:hover {
+  color: #6DD47C !important;
+  /* Light Green*/ }
+
+.genre.folk:hover {
+  color: #A1674B !important;
+  /* Brown*/ }
+
+.genre.hardcore:hover {
+  color: #9B000B !important;
+  /* Cherry*/ }
+
+.genre.hiphop:hover {
+  color: #E04402 !important;
+  /* Orange*/ }
+
+.genre.indie:hover {
+  color: #824EFF !important;
+  /* Light Purple*/ }
+
+.genre.industrial:hover {
+  color: #5C5C5C !important;
+  /* Dark Gray*/ }
+
+.genre.jazz:hover {
+  color: #F4FF5A !important;
+  /* Yellow*/ }
+
+.genre.lofi:hover {
+  color: #E09000 !important;
+  /* Yellow*/ }
+
+.genre.mathrock:hover {
+  color: #70B802 !important;
+  /* Grass*/ }
+
+.genre.pop:hover {
+  color: #DE27AA !important;
+  /* Pink*/ }
+
+.genre.postpunk:hover {
+  color: #8C3DC7 !important;
+  /* Purple*/ }
+
+.genre.postrock:hover {
+  color: #989896 !important;
+  /* Mango*/ }
+
+.genre.punk:hover {
+  color: #70B802 !important;
+  /* Grass*/ }
+
+.genre.randb_soul:hover {
+  color: #DE272D !important;
+  /* Red*/ }
+
+.genre.rock:hover {
+  color: #FF2B25 !important;
+  /* Red*/ }
+
+.genre.shoegaze:hover {
+  color: #E09000 !important;
+  /* Unknown*/ }
+
+.genre.trip-hop:hover {
+  color: #E09000 !important;
+  /* Yellow*/ }
+
+/*# sourceMappingURL=genres.css.map */

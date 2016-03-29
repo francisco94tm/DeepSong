@@ -1,0 +1,132 @@
+
+/*********** COLORS **********/
+
+//** Main colors **/
+
+$blue: #2196F3;
+$steel_blue: #607D8B;
+$teal_green: #009688;
+$navy_blue: #3F51B5;
+
+$green: #4CAF50;
+$darken_green: #0B7A55;
+
+$brown: #795548; 
+$orange: #D44F3D;
+$red: #F44235;
+$dark_red: #AD141E;
+$pink: #E91E63;
+$dark_pink: #A60039;
+$purple: #673AB7;
+$dark_purple: #281E42; 
+
+$darkgray: #222222;
+
+/** Complementary colors **/
+
+$lighten_blue: #00BCD4;
+$light_green: #CDDC39;
+$yellow: #FFC10D; 
+
+ 
+
+/*********** VARIABLES **********/
+$accent: $dark_purple;
+$accent-complementary: $yellow; 
+$scrollbar-color: #999999;
+	 
+/*********** SHADOOWS **********/
+
+.shadow-3-10{
+	$shadow: 0px 3px 10px 0px rgba(0,0,0,0.38);
+	-webkit-box-shadow: $shadow;
+	-moz-box-shadow: $shadow;
+	box-shadow: $shadow;	
+}
+
+.shadow-2-5{
+	$shadow: 0px 2px 5px 0px rgba(0,0,0,0.38);
+	-webkit-box-shadow: $shadow;
+	-moz-box-shadow: $shadow;
+	box-shadow: $shadow;	
+}
+
+/********** BLUR **********/
+@mixin blur($n) { 
+	-webkit-filter: blur($n); 
+	-moz-filter: blur($n); 
+	-o-filter: blur($n); 
+	-ms-filter: blur($n); 
+	filter: blur($n);
+}
+
+/*********** FLEX **********/
+
+.flex{
+	display: -webkit-box;     
+	display: -moz-box;        
+	display: -ms-flexbox;    
+	display: -webkit-flex;     
+	display: flex;
+}
+
+
+.start{
+	justify-content: flex-start;
+	-webkit-justify-content: flex-start;  
+}
+
+
+.end{
+	justify-content: flex-end;
+	-webkit-justify-content: flex-end;  
+}
+
+.space-between{
+	justify-content: space-between;
+	-webkit-justify-content: space-between;  
+}
+
+.center{
+	justify-content: center;
+	-webkit-justify-content: center;  
+}
+
+.align-start{
+	align-content: flex-start;
+	align-items: flex-start;
+	-webkit-align-content: flex-start;
+	-webkit-align-items: flex-start;
+}
+
+.align-end{
+	align-content: flex-end;
+	align-items: flex-end;
+	-webkit-align-content: flex-end;
+	-webkit-align-items: flex-end;
+}
+
+.align-center{
+	align-content: center;
+	align-items: center;
+	-webkit-align-content: center;
+	-webkit-align-items: center;
+}
+ 
+
+.wrap{
+	flex-wrap: wrap;
+	-webkit-flex-wrap: wrap;
+}
+
+.direction-column{
+	flex-direction: column;
+	-webkit-flex-direction: column;
+}
+
+.ellipsis{
+	text-overflow: ellipsis;
+	overflow:hidden;
+	white-space: nowrap;
+	word-break: none;
+}

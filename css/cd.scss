@@ -1,0 +1,164 @@
+@import 'variables';
+
+ .cd-wrapper{
+		@extend .flex;
+		@extend .center;
+		@extend .wrap;		 
+		position: relative;
+		z-index: 1;
+		
+		.cd{  
+			font-family: "Roboto";
+			$side:  250px;
+			$padd: 20px;
+			$margin: 0px;
+			margin: $margin;
+			cursor: pointer;
+			width: $side + $padd*2; 
+			padding: $padd;
+			position: relative;
+			transition: 0.3s;
+			height: auto;
+			position: relative;
+
+			.year{
+					display: none
+				}
+			
+			.cover{
+				width: $side;
+				height: $side; 
+				background-position: center center;
+				background-repeat: no-repeat; 
+				background-size: cover; 
+				transition: 0.3s;
+				@extend .shadow-2-5;
+				
+				.cover-top{ 
+					width: $side;
+					height: $side;  
+					transition: 0.3s;
+					@extend .shadow-3-10;
+					background: #222;
+					opacity: 0;
+					position: relative;
+				}
+			}
+			
+			.info{  
+				padding: 20px 10px 5px 10px;
+				position: relative;
+
+				.name{  
+					transition: 0.3s;	 
+					font-size: 16px;
+					font-weight: 400; 
+					color: #333;			
+					width: 100%;
+					@extend .ellipsis;	
+				}
+
+
+				
+				.artist{ 
+					 
+					font-size: 12px;
+					font-weight: 400;
+					text-transform: uppercase;
+					letter-spacing: 1px;
+					color: #888; 
+					width: 100%;
+					@extend .ellipsis;					
+				}
+				
+				.description{
+					display: none; 
+				}				
+			}
+			
+			.tracklist{
+				display: none;
+			}
+			
+			.genre-wrapper{
+				@extend .flex;      
+				@extend .end;
+				@extend .align-start;
+				@extend .wrap;  				
+				font-family: "Roboto";
+				letter-spacing: 1px;
+				font-weight: 400; 
+				opacity: 0;
+				transition: 0.3s;
+				padding: 5px;
+				position: absolute;
+				top: 20px;
+				left: 20px;
+				width: calc(100% - 40px);
+				height: 100%;
+				padding: $padd;
+				
+				.genre{
+ 					margin: 3px 2px!important;
+					cursor:pointer;
+					font-size: 10px;
+					text-transform: uppercase;   
+					transition: 0.3s; 
+					text-align: center; 
+					width: auto;					
+					color: #fff; 
+					padding: 5px 10px;
+					background-color: rgba((#333),0.9);
+					color: white;					
+				}
+			} 
+			
+			.price{
+				color: #333; 
+				display: inline-block; 
+				font-size: 12px;
+				border-radius: 5px; 
+				opacity: 0.5;
+				transition: 0.3s; 
+				border: solid 1px #555;
+				padding: 5px 10px;
+				margin-top: 10px;
+				font-family: "Roboto";
+				 
+	
+			}
+			
+			&:hover{
+				.info{   
+				}
+				
+				.name{ 
+					color: #333;
+				}
+				
+				.artist{
+					color: $accent;
+				}
+				
+				.price{
+					opacity: 0.8;
+				}
+				
+				.genre-wrapper{
+					opacity: 1;
+				}
+				
+				.cover{
+					/*background-size: 110% auto;*/
+					transition: 1s;
+				}
+				
+				.cover-top{
+					opacity: 0.7;
+				}
+				
+				
+			}
+		} 
+	}    
+		  

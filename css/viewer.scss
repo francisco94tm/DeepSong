@@ -1,0 +1,493 @@
+@import 'variables';
+
+.viewer{
+	@extend .flex!optional;
+	@extend .center!optional;
+	@extend .align-center!optional; 
+	position: fixed;
+	z-index: 50;
+	width: 100%;
+	height: 100%;
+	min-height: 100%;   
+	background: rgba(49,49,49,0.9);
+	top: 0;
+	left: 0!important;
+	
+	 
+	.viewer-container{	 
+		position: relative; 		
+		@extend .flex!optional;
+		@extend	.shadow-3-10!optional;
+		transition: 0.3s;
+
+		.cover-container{
+			width: 450px!important;
+			height: 100%;
+			background: gray;
+			
+			.cover{
+				background-position: center center;
+				background-size: cover; 
+				height: 100%;
+			} 
+		}
+		
+		.info-container{
+			width: calc(100% - 450px)!important;
+			height: 100%; 			
+			border-left: solid 1px #ccc;
+			position: relative;
+			background: transparent;
+			
+			.top-section{   
+				position: absolute;
+				top: 0;
+				width: 100%;
+				height: 60px;
+				@extend .flex!optional;
+
+				.genre-wrapper{ 
+					margin-top: 20px; 
+					margin-right: 70px;
+					width: 100%; 
+					font-family: "Roboto";
+					letter-spacing: 1px;
+					font-weight: 300;
+					
+					
+					.outline{
+						display: inline-block;  
+						position: relative;  
+						margin-right: 5px;
+						border: solid 1px #eee; 
+						border-radius: 20px; 
+						overflow: hidden; 
+						float: right; 
+						
+						.genre{
+							padding: 5px 20px 5px 20px;
+							margin: 0;
+							cursor:pointer;
+							font-size: 12px;
+							text-transform: uppercase;  
+							display: inline-block;
+							transition: 0.3s;
+							color: #999;
+						}
+					} 
+				}
+			}
+			
+			
+			.main-section{
+				margin-top: 75px; 
+				padding-top: 10px;
+				margin-bottom: 85px; 
+				height: calc(100% - 160px);  
+				overflow: auto;   
+				position: relative;
+				
+				
+				.artist-circle{ 
+					background-position: center center;
+					background-size: cover; 
+					width: 70px!important; 
+					height: 70px!important; 
+					border-radius: 50%; 
+					position: absolute;
+					border: solid 1px #ccc; 
+					margin: 25px 0 0 55px;
+				}
+				
+				.info{
+					margin: 0px 0px 5px 150px; 
+					@extend .flex!optional;           
+					@extend .direction-column!optional;
+					@extend .center!optional;
+					width: calc(100% - 200px);
+					
+					.cd-name{
+						margin-top: 30px;
+						font-size: 30px;
+						font-weight: 300;
+						color: #333;  	 
+					}
+					
+					.artist-name{
+						width: auto;
+						font-size: 14px;
+						line-height: 15px; 
+						color: #0B7A55; 
+						letter-spacing: 1px; 
+						font-weight: 400;		 
+						text-transform: uppercase;     
+						padding: 5px 0;   
+						cursor: pointer; 
+					}
+				}
+				
+				.description{				
+					text-align: justify;
+		 
+					font-weight: 400;
+					font-size: 0.9em;
+					line-height: 20px;
+					width: 100%;
+					padding: 20px 60px 20px 60px; 
+					cursor: default;
+					font-family: "Roboto";
+				}   
+			}
+			
+			.bottom-section{
+				padding: 0 40px 25px 40px;
+				width: 100%;
+				height: 75px;
+				position: absolute;
+				bottom: 0; 
+				@extend .flex!optional;
+				@extend .end!optional;
+				background:  white;
+				
+				.controls{ 
+					margin-top: solid 2px #ccc;
+					width: 100%;
+					height: 100%;  
+					@extend .flex;
+					@extend .end;
+					@extend .align-end; 
+					 
+					.buy-btn{
+						background: #0B7A55;
+						color: white;  
+						padding: 10px 30px;
+						text-align: center;
+						border-radius: 30px;
+						cursor: pointer;
+						font-size: 15px;
+						margin-left: 10px;
+					}
+					
+					.tracklist-btn, .video-btn{
+						 color: #888;
+						 display: inline-block;
+						 text-align: center;
+						 width: 40px;
+						 line-height: 40px;
+						 margin: 0 5px;
+						 cursor: pointer;
+						 position: relative; 
+					 }  
+				}
+			
+			}
+		} 
+	}   
+	
+	.close, .reduce, .expand{
+		display: inline-block;
+		width: 60px;
+		height: 60px;
+		line-height: 60px; 
+		text-align: center;
+		cursor: pointer;
+		transition: 0.3s;
+		position: absolute;
+		z-index: 22; 
+	}
+	
+	
+	.reduce{
+		color: white; 
+		background: rgba(50,50,50,0.8);
+		top: 60px;
+		right: 0px;
+		display: none;
+		
+		span:before{
+			font-size: 18px;
+		}
+		
+		&:hover{
+			background-color: #0B7A55;
+		}
+	}	
+	
+	.expand{
+		color: white; 
+		opacity: 0;
+		width: 200px;
+		height: 112px;
+		bottom: -20px;
+		color: white;
+		left: 500px; 
+		display: none;
+		
+		span:before{
+			line-height: 112px;
+			font-size: 35px;
+		}
+		
+		&:hover{ 
+			opacity: 0.9;
+		}
+	}
+} 
+ 
+		.viewer-container1{				
+			width: 950px!important;
+			height: 450px!important;
+			background: white!Important;
+			 
+		}
+		
+		.viewer-container2{				
+			width: 800px!important;
+			height: 450px!important;
+			background: #111!Important; 
+		}
+	
+  
+	 
+		.close1{
+			top: 0;
+			right: 0px; 
+			background: white!important
+		}
+		
+		.close2{ 
+			color: white; 
+			background: rgba(50,50,50,0.8);
+			top: 0px; 
+			right: 0px;
+
+			span:before{
+				font-size: 16px;
+			}
+			
+			&:hover{
+				background-color: #0B7A55;
+			}
+		} 
+		 
+	 
+	  
+	.viewer .cd{
+		  
+		top: 0;
+		right: 0; 
+		width: 100%;
+		height: 100%;  
+		background: #eee;
+	}
+	
+		.viewer .cd .cover{
+			width: 100%;
+			height: 100%;
+			background-size: cover;	 
+		}
+		
+ 
+	.viewer .video-container{
+		
+		width: 100%;
+		height: 100%;
+		display: none;
+		position: absolute;
+		z-index: 21;
+		transition: 0.3s; 
+		bottom: 0;
+		left: 500px;
+		
+	}
+	  
+		
+		.video-left{
+			left: 0!important;
+			
+		}
+		
+		.video-container-min { 
+			width: 200px!important;
+			height: 112px!important;
+			position: absolute!important;
+			bottom: -20px!important;
+			left:  500px!important;
+			-webkit-box-shadow: 0px 5px 20px 0px rgba(0,0,0,0.38);
+			-moz-box-shadow: 0px 5px 20px 0px rgba(0,0,0,0.38);
+			box-shadow: 0px 5px 20px 0px rgba(0,0,0,0.38); 
+			background-color: #111;
+		}
+		
+		
+		 
+	.video-container .video, .video-container .video iframe{
+		transition: 1s;
+		width: 100%!important;
+		height: 100%!important;
+	}
+			
+
+	.tracklist-popup{  
+		position: absolute;
+		z-index: 31;
+		display: none;
+		transition: 0.3s;  
+		bottom: 65px;
+		margin-left: -10px;
+	}
+	
+	.tracklist-container{
+		
+		width: 200px; 
+		overflow: auto;
+		border: solid 1px #ccc; 
+		background: white; 
+		-webkit-box-shadow: 0px 27px 56px 6px rgba(0,0,0,0.16);
+		-moz-box-shadow: 0px 27px 56px 6px rgba(0,0,0,0.16);
+		box-shadow: 0px 27px 56px 6px rgba(0,0,0,0.16);	
+		transition: 0.3s;  
+	}
+ 
+	
+	.tracklist-triangle{
+		width: 0;
+		height: 0;
+		border-top: solid 15px #fff;
+		border-left: solid 10px transparent;
+		border-right: solid 10px transparent;
+		margin: -1px auto 0 auto; 
+		display: none;
+	}
+	
+		.tracklist-container .tracklist-cd{
+			transition: 0.3s;
+			background: rgba(255,255,255,0.9);
+			height: 50px; 
+		}
+		
+			.tracklist-animation{
+				height: 290px!important;
+				transition: 0.3s;
+			}
+		 
+		.tracklist-container .song{
+			line-height: 14px;
+			padding: 8px 20px;
+			font-size: 12px; 		
+			background: transparent ;
+			@extend .flex;
+			align-content: flex-start;
+			-webkit-align-content: flex-start;
+			align-items: flex-start;
+			-webkit-align-items: flex-start;
+			
+		}
+		
+		.tracklist-container .song:nth-child(odd){
+			background: rgba(55,55,55,0.02);
+		}
+		  
+		 .tracklist-container .song:nth-child(1){
+			 padding-top: 20px;
+		 }
+		 
+		.tracklist-container .song:nth-last-child(1){
+			padding-bottom: 20px;
+		}
+		
+		.tracklist-container .song:nth-last-child(1):before{
+			content: "";
+			
+			display: block;
+			position: absolute;			
+			width: 0;
+			bottom: -14px;
+			margin-left: 0px;
+			height: 0;
+			border-top: solid 15px #fff; 
+			border-right: solid 10px transparent;
+			border-left: solid 10px transparent;
+		}
+	
+		.tracklist-container .song .number{
+			display: inline-block;
+			width: 25px; 
+			text-align: left;
+		}
+		
+		.tracklist-container .song .name{
+			display: inline-block;
+			width: calc(100% - 25px);
+			color: #111!important;
+			text-align: left;
+		}
+		
+			.tracklist-container .song .name:hover{
+				color: #111!important;
+			}
+			
+	/*	
+	.viewer 	.comments-wrapper{ 
+		background-color: #ddd;
+		margin: 0;
+		padding: 5% 10%;
+	}
+	
+		.viewer 	.comments-wrapper .comment{
+			 
+			color: #333;
+			background-color: #d3d3d3;
+			padding: 30px; 
+			width: auto; 
+			text-align: center;
+			font-weight: 300;
+			font-size: 20px;
+			border-radius: 5px;
+			margin-bottom: 20px;
+		}
+	*/
+
+/* /////////////////////////////////////////////////////////////////////////////////////////*/
+/* /////////////////////////////////////////////////////////////////////////////////////////*/
+/* /////////////////////////////////////////////////////////////////////////////////////////*/
+/*
+/*			ADAPTABILITY
+/*
+/* /////////////////////////////////////////////////////////////////////////////////////////*/
+/* /////////////////////////////////////////////////////////////////////////////////////////*/	
+/* /////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+
+/** MEDIA SCREEN 900PX ---------------------------------------------------------*/
+	
+	@media screen and (max-width:900px){
+		
+		.viewer .viewer-container{
+			height: 100vh!important;
+			margin: 0; 
+			overflow: auto;  
+			flex-wrap: wrap;
+			-webkit-flex-wrap: wrap;
+		}
+		 
+		
+		.viewer .cd{
+			position: relative;
+			width: 100%;
+			height: 100vw;
+			margin: 0 auto;
+		}
+		  
+		 
+	}
+
+		
+
+
+	
+	
+	
+
+		

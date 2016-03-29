@@ -1,0 +1,102 @@
+@import 'variables';
+
+
+.cd-wrapper{
+	@extend .flex;
+	@extend .wrap; 
+	position: relative;
+	margin-bottom: 0;  
+	transition: 0.3s;
+}
+	 
+
+	 
+.cd{
+	
+	$side:  240px;
+	$padd: 20px;
+	$margin: 0px;
+	
+	margin: $margin;
+	cursor: pointer;
+	width: $side + $padd*2; 
+	padding: $padd;
+	position: relative;
+	transition: 0.3s;
+	
+	&:hover{
+		
+		.cover{
+			opacity: 0.9;
+		}
+		
+		.name{ 
+		}
+		
+		.price{ 
+			opacity: 1!important;
+		}
+	}
+	
+	.cover{			 
+		width: $side;
+		height: $side; 
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		transition: 0.3s;
+		@extend .shadow-3-10;
+	}
+	
+	.genre-wrapper{
+		display: none; 
+	}
+	
+	
+	.info{ 
+		padding: 5px 10px;
+		position: relative; 
+		
+		.year{  
+			color: #ccc;
+			font-size: 11px;
+			font-weight: 700;
+			margin-top: 5px; 
+		}
+		
+		.name{			
+			font-weight: 300; 
+			color: #333;
+			font-size: 18px;  
+			width: 100%;
+			@extend .ellipsis;  
+		}
+		
+		
+	
+		
+		.price{
+			color: #555; 
+			display: inline-block; 
+			font-size: 12px;
+			border-radius: 5px; 
+			opacity: 0.5;
+			transition: 0.3s; 
+			border: solid 1px #555;
+			padding: 5px 10px;
+			margin-top: 10px;
+			 
+			 
+		}
+		
+	}
+	
+	.tracklist{
+		display: none;
+	}
+	
+	.description{
+		display: none;
+	}
+}
+ 

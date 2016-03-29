@@ -1,0 +1,566 @@
+@charset "UTF-8";
+/*********** COLORS **********/
+/** Complementary colors **/
+/*********** VARIABLES **********/
+/*********** SHADOOWS **********/
+.shadow-3-10, .artist-container .inner-container .letter-wrapper, .favorite-container .options, .side-menu {
+  -webkit-box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.38);
+  -moz-box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.38);
+  box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.38); }
+
+.shadow-2-5, .favorite-container .favorite-inner-wrapper .favorite .cover, .navbar-wrapper, .nav-buttons-container {
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.38);
+  -moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.38);
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.38); }
+
+/********** BLUR **********/
+/*********** FLEX **********/
+.flex, .artist-container .inner-container .letter-wrapper, .artist-container .inner-container .artist-wrapper .artist-inner-wrapper, .favorite-container .favorite-inner-wrapper, .favorite-container .favorite-inner-wrapper .favorite, .favorite-container .favorite-inner-wrapper .favorite .cd, .navbar-wrapper, .navbar-wrapper .top, .navbar .nav-buttons, .side-menu .btn-container, .side-menu .btn-container .btn {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex; }
+
+.start {
+  justify-content: flex-start;
+  -webkit-justify-content: flex-start; }
+
+.end {
+  justify-content: flex-end;
+  -webkit-justify-content: flex-end; }
+
+.space-between, .navbar-wrapper, .navbar .nav-buttons, .side-menu .btn-container {
+  justify-content: space-between;
+  -webkit-justify-content: space-between; }
+
+.center, .artist-container .inner-container .letter-wrapper, .artist-container .inner-container .artist-wrapper .artist-inner-wrapper, .favorite-container .favorite-inner-wrapper {
+  justify-content: center;
+  -webkit-justify-content: center; }
+
+.align-start, .artist-container .inner-container .artist-wrapper .artist-inner-wrapper {
+  align-content: flex-start;
+  align-items: flex-start;
+  -webkit-align-content: flex-start;
+  -webkit-align-items: flex-start; }
+
+.align-end, .navbar .nav-buttons {
+  align-content: flex-end;
+  align-items: flex-end;
+  -webkit-align-content: flex-end;
+  -webkit-align-items: flex-end; }
+
+.align-center, .artist-container .inner-container .letter-wrapper, .navbar-wrapper, .navbar-wrapper .top, .side-menu .btn-container .btn {
+  align-content: center;
+  align-items: center;
+  -webkit-align-content: center;
+  -webkit-align-items: center; }
+
+.wrap, .artist-container .inner-container .artist-wrapper .artist-inner-wrapper, .favorite-container .favorite-inner-wrapper {
+  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap; }
+
+.direction-column, .favorite-container .favorite-inner-wrapper .favorite, .side-menu .btn-container {
+  flex-direction: column;
+  -webkit-flex-direction: column; }
+
+.ellipsis, .favorite-container .favorite-inner-wrapper .favorite .info .name, .favorite-container .favorite-inner-wrapper .favorite .info .artist {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  word-break: none; }
+
+/*********** COLORS **********/
+/** Complementary colors **/
+/*********** VARIABLES **********/
+/*********** SHADOOWS **********/
+.shadow-3-10, .artist-container .inner-container .letter-wrapper, .favorite-container .options, .side-menu {
+  -webkit-box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.38);
+  -moz-box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.38);
+  box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.38); }
+
+.shadow-2-5, .favorite-container .favorite-inner-wrapper .favorite .cover, .navbar-wrapper, .nav-buttons-container {
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.38);
+  -moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.38);
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.38); }
+
+/********** BLUR **********/
+/*********** FLEX **********/
+.flex, .artist-container .inner-container .letter-wrapper, .artist-container .inner-container .artist-wrapper .artist-inner-wrapper, .favorite-container .favorite-inner-wrapper, .favorite-container .favorite-inner-wrapper .favorite, .favorite-container .favorite-inner-wrapper .favorite .cd, .navbar-wrapper, .navbar-wrapper .top, .navbar .nav-buttons, .side-menu .btn-container, .side-menu .btn-container .btn {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex; }
+
+.start {
+  justify-content: flex-start;
+  -webkit-justify-content: flex-start; }
+
+.end {
+  justify-content: flex-end;
+  -webkit-justify-content: flex-end; }
+
+.space-between, .navbar-wrapper, .navbar .nav-buttons, .side-menu .btn-container {
+  justify-content: space-between;
+  -webkit-justify-content: space-between; }
+
+.center, .artist-container .inner-container .letter-wrapper, .artist-container .inner-container .artist-wrapper .artist-inner-wrapper, .favorite-container .favorite-inner-wrapper {
+  justify-content: center;
+  -webkit-justify-content: center; }
+
+.align-start, .artist-container .inner-container .artist-wrapper .artist-inner-wrapper {
+  align-content: flex-start;
+  align-items: flex-start;
+  -webkit-align-content: flex-start;
+  -webkit-align-items: flex-start; }
+
+.align-end, .navbar .nav-buttons {
+  align-content: flex-end;
+  align-items: flex-end;
+  -webkit-align-content: flex-end;
+  -webkit-align-items: flex-end; }
+
+.align-center, .artist-container .inner-container .letter-wrapper, .navbar-wrapper, .navbar-wrapper .top, .side-menu .btn-container .btn {
+  align-content: center;
+  align-items: center;
+  -webkit-align-content: center;
+  -webkit-align-items: center; }
+
+.wrap, .artist-container .inner-container .artist-wrapper .artist-inner-wrapper, .favorite-container .favorite-inner-wrapper {
+  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap; }
+
+.direction-column, .favorite-container .favorite-inner-wrapper .favorite, .side-menu .btn-container {
+  flex-direction: column;
+  -webkit-flex-direction: column; }
+
+.ellipsis, .favorite-container .favorite-inner-wrapper .favorite .info .name, .favorite-container .favorite-inner-wrapper .favorite .info .artist {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  word-break: none; }
+
+/* ARTIST CONTAINER *********************************************/
+.artist-container {
+  position: fixed;
+  z-index: 60;
+  width: 100%;
+  height: calc(100% - 60px);
+  width: 100% !important;
+  background: rgba(51, 51, 51, 0.95);
+  top: 60px;
+  left: 0;
+  transition: 0.4s; }
+  .artist-container .inner-container {
+    background: #fafafa;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    /** Subcontenedor de letras **/
+    /** Subcontenedor de artistas **/ }
+    .artist-container .inner-container .letter-wrapper {
+      @extends .wrap;
+      width: 100%;
+      padding: 10px 40px;
+      height: 60px;
+      background: #281E42;
+      position: relative;
+      z-index: 20;
+      /** cada letra **/ }
+      .artist-container .inner-container .letter-wrapper .letter {
+        opacity: 0.7;
+        width: 45px;
+        height: 45px;
+        font-size: 15px;
+        font-weight: 400;
+        cursor: pointer;
+        text-align: center;
+        color: white;
+        line-height: 45px;
+        border-radius: 50%; }
+        .artist-container .inner-container .letter-wrapper .letter:hover {
+          opacity: 1;
+          font-weight: 400 !important; }
+        .artist-container .inner-container .letter-wrapper .letter.selectLetter {
+          opacity: 1 !important;
+          background: rgba(10, 10, 10, 0.2);
+          font-weight: 400 !important;
+          color: #FFC10D; }
+    .artist-container .inner-container .artist-wrapper {
+      position: relative;
+      z-index: 19;
+      overflow: hidden;
+      width: 100% !important;
+      height: calc(100% - 60px);
+      padding: 0;
+      margin: 0;
+      border-radius: 0 !important; }
+      .artist-container .inner-container .artist-wrapper .artist-inner-wrapper {
+        overflow: auto !important;
+        height: 100%;
+        padding: 40px 50px 20px 50px;
+        width: 100% !important;
+        border: none !important;
+        border-radius: 0 !important;
+        /* Cada artista **/ }
+        .artist-container .inner-container .artist-wrapper .artist-inner-wrapper .artist {
+          width: 160px;
+          cursor: pointer;
+          padding: 20px;
+          border-radius: 5px;
+          border: solid 1px transparent; }
+          .artist-container .inner-container .artist-wrapper .artist-inner-wrapper .artist .circle {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border: solid 1px #ccc;
+            margin-bottom: 15px; }
+          .artist-container .inner-container .artist-wrapper .artist-inner-wrapper .artist .name {
+            text-align: center;
+            font-size: 13px;
+            color: #333;
+            font-weight: 400;
+            text-transform: uppercase; }
+          .artist-container .inner-container .artist-wrapper .artist-inner-wrapper .artist:hover {
+            background: #fcfcfc; }
+            .artist-container .inner-container .artist-wrapper .artist-inner-wrapper .artist:hover .name {
+              color: #281E42; }
+
+/*********** COLORS **********/
+/** Complementary colors **/
+/*********** VARIABLES **********/
+/*********** SHADOOWS **********/
+.shadow-3-10, .artist-container .inner-container .letter-wrapper, .favorite-container .options, .side-menu {
+  -webkit-box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.38);
+  -moz-box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.38);
+  box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.38); }
+
+.shadow-2-5, .favorite-container .favorite-inner-wrapper .favorite .cover, .navbar-wrapper, .nav-buttons-container {
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.38);
+  -moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.38);
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.38); }
+
+/********** BLUR **********/
+/*********** FLEX **********/
+.flex, .artist-container .inner-container .letter-wrapper, .artist-container .inner-container .artist-wrapper .artist-inner-wrapper, .favorite-container .favorite-inner-wrapper, .favorite-container .favorite-inner-wrapper .favorite, .favorite-container .favorite-inner-wrapper .favorite .cd, .navbar-wrapper, .navbar-wrapper .top, .navbar .nav-buttons, .side-menu .btn-container, .side-menu .btn-container .btn {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex; }
+
+.start {
+  justify-content: flex-start;
+  -webkit-justify-content: flex-start; }
+
+.end {
+  justify-content: flex-end;
+  -webkit-justify-content: flex-end; }
+
+.space-between, .navbar-wrapper, .navbar .nav-buttons, .side-menu .btn-container {
+  justify-content: space-between;
+  -webkit-justify-content: space-between; }
+
+.center, .artist-container .inner-container .letter-wrapper, .artist-container .inner-container .artist-wrapper .artist-inner-wrapper, .favorite-container .favorite-inner-wrapper {
+  justify-content: center;
+  -webkit-justify-content: center; }
+
+.align-start, .artist-container .inner-container .artist-wrapper .artist-inner-wrapper {
+  align-content: flex-start;
+  align-items: flex-start;
+  -webkit-align-content: flex-start;
+  -webkit-align-items: flex-start; }
+
+.align-end, .navbar .nav-buttons {
+  align-content: flex-end;
+  align-items: flex-end;
+  -webkit-align-content: flex-end;
+  -webkit-align-items: flex-end; }
+
+.align-center, .artist-container .inner-container .letter-wrapper, .navbar-wrapper, .navbar-wrapper .top, .side-menu .btn-container .btn {
+  align-content: center;
+  align-items: center;
+  -webkit-align-content: center;
+  -webkit-align-items: center; }
+
+.wrap, .artist-container .inner-container .artist-wrapper .artist-inner-wrapper, .favorite-container .favorite-inner-wrapper {
+  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap; }
+
+.direction-column, .favorite-container .favorite-inner-wrapper .favorite, .side-menu .btn-container {
+  flex-direction: column;
+  -webkit-flex-direction: column; }
+
+.ellipsis, .favorite-container .favorite-inner-wrapper .favorite .info .name, .favorite-container .favorite-inner-wrapper .favorite .info .artist {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  word-break: none; }
+
+/* FAVORITE CONTAINER *********************************************/
+.favorite-container {
+  position: fixed;
+  z-index: 50;
+  width: 100%;
+  height: calc(100% - 60px);
+  background: white;
+  top: 60px;
+  left: 0;
+  transition: 0.4s; }
+  .favorite-container .options {
+    height: 60px;
+    line-height: 50px;
+    background: #281E42;
+    padding-left: 8vw;
+    font-family: "Roboto";
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+    text-transform: uppercase;
+    padding-bottom: 15px;
+    cursor: default;
+    position: relative; }
+
+.favorite-container .favorite-inner-wrapper {
+  padding: 50px 50px 30px 50px;
+  height: calc(100% - 50px);
+  overflow: auto !important;
+  margin: -10px auto 0 auto;
+  z-index: 19;
+  position: relative; }
+  .favorite-container .favorite-inner-wrapper .favorite {
+    width: 250px;
+    height: 300px;
+    padding: 0 20px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    position: relative;
+    border: solid 1px transparent;
+    cursor: pointer; }
+    .favorite-container .favorite-inner-wrapper .favorite .number {
+      width: 30px;
+      line-height: 70px;
+      font-weight: 300;
+      font-size: 30px;
+      text-align: center;
+      color: #281E42;
+      transition: 0.3s; }
+    .favorite-container .favorite-inner-wrapper .favorite .cd {
+      position: relative; }
+    .favorite-container .favorite-inner-wrapper .favorite .cover {
+      background-size: cover;
+      width: 200px;
+      height: 200px;
+      background-position: center center; }
+    .favorite-container .favorite-inner-wrapper .favorite .info {
+      width: 200px;
+      height: 80px;
+      transition: 0.3s;
+      padding: 20px; }
+      .favorite-container .favorite-inner-wrapper .favorite .info .name {
+        font-size: 16px;
+        font-weight: 400;
+        color: #333;
+        width: 100%; }
+      .favorite-container .favorite-inner-wrapper .favorite .info .artist {
+        font-size: 12px;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: #888;
+        width: 100%; }
+    .favorite-container .favorite-inner-wrapper .favorite:hover {
+      /*border: solid 1px $accent;*/
+      background: #fcfcfc; }
+      .favorite-container .favorite-inner-wrapper .favorite:hover .artist {
+        color: #281E42 !important; }
+
+/** NAVBAR DEFAULT******************************************************************************/
+.navbar {
+  width: 100%;
+  left: 0px;
+  top: 0px;
+  z-index: 45;
+  position: fixed; }
+  .navbar .nav-buttons {
+    margin: 0 10px; }
+    .navbar .nav-buttons .btn {
+      width: 100px;
+      height: 60px;
+      margin: 0;
+      transition: 0.3s; }
+      .navbar .nav-buttons .btn i:before {
+        font-size: 20px;
+        line-height: calc(60px - 3px); }
+
+.navbar-wrapper {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 30;
+  height: 60px;
+  background: #281E42;
+  transition: 0.3s; }
+  .navbar-wrapper .top {
+    color: white;
+    font-weight: 400;
+    font-family: "Roboto","Arial",sans-serif;
+    text-align: center;
+    padding: 0 10px;
+    position: relative;
+    text-transform: uppercase; }
+    .navbar-wrapper .top .menu {
+      width: 90px;
+      height: 60px;
+      color: white;
+      cursor: pointer;
+      line-height: 60px;
+      text-align: center;
+      margin: 0 10px;
+      transition: 0.3s; }
+      .navbar-wrapper .top .menu span:before {
+        transition: 0.3s; }
+      .navbar-wrapper .top .menu:hover span:before {
+        font-size: 16px !important; }
+    .navbar-wrapper .top .back-logo {
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 9; }
+    .navbar-wrapper .top .text {
+      color: white;
+      text-transform: uppercase;
+      font-weight: 100;
+      font-size: 25px;
+      transition: 0.3s;
+      cursor: pointer;
+      width: 140px;
+      height: 60px;
+      line-height: 60px; }
+      .navbar-wrapper .top .text:hover {
+        font-size: 22px; }
+      .navbar-wrapper .top .text b {
+        font-weight: 400; }
+  .navbar-wrapper .logo-not-begginning {
+    font-size: 45px !important;
+    background-attachment: scroll !important; }
+
+/** Botones de navegaci├│n*/
+.navbar .nav-buttons {
+  height: 100%; }
+  .navbar .nav-buttons .btn {
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    border-top: solid 3px transparent;
+    color: white; }
+    .navbar .nav-buttons .btn i:before {
+      transition: 0.3s; }
+    .navbar .nav-buttons .btn:hover {
+      border-top: solid 3px white; }
+
+/** Se di├│ clic en un boton de la barra de navegaci├│n */
+.navbutSelected {
+  border-top: solid 5px #FFC10D !important; }
+  .navbutSelected i:before {
+    font-family: "Flaticon";
+    content: "\e017"; }
+
+/* Contenedor prncipal para opciones de la barra de navegacion*/
+.nav-buttons-container {
+  height: 0px;
+  width: 100%;
+  background: #eee;
+  z-index: 11;
+  position: fixed;
+  overflow: hidden; }
+
+/** NAVBAR DEFAULT******************************************************************************/
+.side-menu {
+  width: 250px;
+  height: 100%;
+  position: fixed;
+  background: #281E42;
+  top: 0;
+  left: -250px;
+  z-index: 50;
+  transition: 0.4s; }
+  .side-menu .top {
+    position: absolute;
+    z-index: 50;
+    opacity: 0.3;
+    width: 100%;
+    height: 100%;
+    background: #000; }
+  .side-menu .close-btn {
+    color: white;
+    float: right;
+    display: block;
+    width: 60px;
+    line-height: 60px;
+    cursor: pointer;
+    text-align: center;
+    z-index: 51;
+    position: relative; }
+    .side-menu .close-btn i:before {
+      transition: 0.3s; }
+    .side-menu .close-btn:hover i:before {
+      font-size: 16px !important; }
+  .side-menu .btn-container {
+    width: 100%;
+    height: calc(100% - 60px);
+    z-index: 51;
+    position: relative; }
+    .side-menu .btn-container .btn {
+      color: white;
+      width: 100%;
+      height: 60px;
+      cursor: pointer;
+      line-height: 60px;
+      padding: 0 30px; }
+      .side-menu .btn-container .btn .circle.artistImg {
+        border-radius: 50%;
+        width: 40px;
+        margin: 0 20px 0 -10px;
+        height: 40px;
+        background-position: center center;
+        background-size: cover; }
+      .side-menu .btn-container .btn i {
+        width: 50px;
+        height: 60px;
+        display: inline-block;
+        line-height: 60px; }
+      .side-menu .btn-container .btn:hover {
+        background: rgba(0, 0, 0, 0.2); }
+
+.expand_menu {
+  left: 0 !important; }
+
+.body_expand_menu {
+  margin-left: 250px !important; }
+
+.navbar_expand_menu {
+  padding-left: 200px !important; }
+  .navbar_expand_menu .menu {
+    opacity: 0; }
+
+.selected_btn {
+  border-left: solid 3px #FFC10D;
+  color: #FFC10D !important; }
+
+/** MEDIA SCREEN 900PX ---------------------------------------------------------*/
+@media screen and (max-width: 900px) {
+  .letter-wrapper .letter {
+    display: none; }
+
+  .selectLetter {
+    display: block !important; } }
+
+/*# sourceMappingURL=navbar.css.map */

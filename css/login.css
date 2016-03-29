@@ -1,0 +1,235 @@
+/*********** COLORS **********/
+/** Complementary colors **/
+/*********** VARIABLES **********/
+/*********** SHADOOWS **********/
+.shadow-3-10, .error-alert, .navbar, .card-wrapper .card {
+  -webkit-box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.38);
+  -moz-box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.38);
+  box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.38); }
+
+.shadow-2-5 {
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.38);
+  -moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.38);
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.38); }
+
+/********** BLUR **********/
+/*********** FLEX **********/
+.flex, .navbar, .card-wrapper, form[name=login], form[name=register] {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex; }
+
+.start {
+  justify-content: flex-start;
+  -webkit-justify-content: flex-start; }
+
+.end, .card-wrapper, form[name=login] {
+  justify-content: flex-end;
+  -webkit-justify-content: flex-end; }
+
+.space-between {
+  justify-content: space-between;
+  -webkit-justify-content: space-between; }
+
+.center {
+  justify-content: center;
+  -webkit-justify-content: center; }
+
+.align-start {
+  align-content: flex-start;
+  align-items: flex-start;
+  -webkit-align-content: flex-start;
+  -webkit-align-items: flex-start; }
+
+.align-end {
+  align-content: flex-end;
+  align-items: flex-end;
+  -webkit-align-content: flex-end;
+  -webkit-align-items: flex-end; }
+
+.align-center, form[name=login] {
+  align-content: center;
+  align-items: center;
+  -webkit-align-content: center;
+  -webkit-align-items: center; }
+
+.wrap, .card-wrapper {
+  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap; }
+
+.direction-column, form[name=register] {
+  flex-direction: column;
+  -webkit-flex-direction: column; }
+
+.ellipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  word-break: none; }
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0; }
+
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box; }
+
+body {
+  position: relative;
+  font-family: "Roboto","Arial",sans-serif; }
+
+.error-alert {
+  width: 300px;
+  height: auto;
+  position: fixed;
+  z-index: 100;
+  background: #333;
+  color: white;
+  padding: 30px;
+  bottom: 50px;
+  left: 50px; }
+
+.navbar {
+  width: 100%;
+  height: 100px;
+  background: #222;
+  padding: 0 50px;
+  z-index: 30;
+  position: fixed; }
+  .navbar .logo {
+    color: white;
+    text-transform: uppercase;
+    font-size: 30px;
+    cursor: default;
+    font-weight: 400;
+    line-height: 100px;
+    position: relative; }
+    .navbar .logo .text span {
+      font-weight: 100; }
+  .navbar .more {
+    color: white;
+    line-height: 100px;
+    width: 60px;
+    text-align: center;
+    cursor: pointer; }
+
+.img-back, .img-back-top {
+  width: 110%;
+  height: calc(110% - 100px);
+  position: fixed;
+  top: calc(100px - 5%);
+  left: -5%; }
+
+.img-back {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  z-index: -1;
+  -webkit-filter: blur(10px);
+  -moz-filter: blur(10px);
+  -o-filter: blur(10px);
+  -ms-filter: blur(10px);
+  filter: blur(10px); }
+
+.img-back-top {
+  background-color: #111;
+  z-index: 0;
+  opacity: 0.6; }
+
+.card-wrapper {
+  position: absolute;
+  z-index: 20;
+  top: 100px;
+  padding: 50px;
+  width: 100%; }
+  .card-wrapper .card {
+    cursor: default;
+    width: 350px;
+    padding: 30px;
+    margin: 10px;
+    background: white;
+    text-align: center; }
+    .card-wrapper .card .info {
+      margin-top: 20px;
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: 700; }
+
+form[name=login] {
+  z-index: 1;
+  position: relative;
+  width: 100%; }
+  form[name=login] input {
+    border: none;
+    outline: none;
+    margin: 10px;
+    width: 200px;
+    font-family: "Roboto";
+    transition: 0.3s; }
+    form[name=login] input[type=text], form[name=login] input[type=password], form[name=login] input[type=email] {
+      background: transparent;
+      font-weight: 400;
+      border-bottom: solid 1px rgba(255, 255, 255, 0.9);
+      color: white;
+      font-size: 15px;
+      padding: 10px 10px; }
+    form[name=login] input[type=submit] {
+      background: transparent;
+      border: solid 1px rgba(255, 255, 255, 0.7);
+      border-radius: 40px;
+      color: white;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 12px;
+      cursor: pointer;
+      width: 150px;
+      padding: 10px; }
+      form[name=login] input[type=submit]:hover {
+        background: white;
+        color: #111; }
+    form[name=login] input:focus, form[name=login] input:link {
+      color: white !important; }
+    form[name=login] input::-webkit-input-placeholder {
+      color: rgba(255, 255, 255, 0.4); }
+    form[name=login] input:-webkit-autofill {
+      -webkit-box-shadow: 0 0 0 1000px #222 inset;
+      color: #fff !important; }
+
+form[name=register] {
+  padding-top: 30px;
+  z-index: 20;
+  background: transparent;
+  background: white;
+  transition: 0.2s; }
+  form[name=register] input {
+    display: block;
+    background: transparent;
+    padding: 10px 20px !important;
+    font-size: 16px;
+    border: none;
+    width: calc(100% - 60px);
+    color: #111;
+    font-family: "Roboto";
+    border-bottom: solid 1px #ccc;
+    margin: 10px 20px;
+    outline: none; }
+    form[name=register] input::-webkit-input-placeholder {
+      color: rgba(0, 0, 0, 0.5); }
+    form[name=register] input[type=submit] {
+      margin-top: 20px !important;
+      width: 100%;
+      border: none;
+      color: #281E42;
+      padding: 20px !important;
+      cursor: pointer;
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: 700;
+      margin: 0; }
+
+/*# sourceMappingURL=login.css.map */

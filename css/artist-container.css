@@ -1,0 +1,161 @@
+/*********** COLORS **********/
+/** Complementary colors **/
+/*********** VARIABLES **********/
+/*********** SHADOOWS **********/
+.shadow-3-10, .artist-container .inner-container .letter-wrapper {
+  -webkit-box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.38);
+  -moz-box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.38);
+  box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.38); }
+
+.shadow-2-5 {
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.38);
+  -moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.38);
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.38); }
+
+/********** BLUR **********/
+/*********** FLEX **********/
+.flex, .artist-container .inner-container .letter-wrapper, .artist-container .inner-container .artist-wrapper .artist-inner-wrapper {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex; }
+
+.start {
+  justify-content: flex-start;
+  -webkit-justify-content: flex-start; }
+
+.end {
+  justify-content: flex-end;
+  -webkit-justify-content: flex-end; }
+
+.space-between {
+  justify-content: space-between;
+  -webkit-justify-content: space-between; }
+
+.center, .artist-container .inner-container .letter-wrapper, .artist-container .inner-container .artist-wrapper .artist-inner-wrapper {
+  justify-content: center;
+  -webkit-justify-content: center; }
+
+.align-start, .artist-container .inner-container .artist-wrapper .artist-inner-wrapper {
+  align-content: flex-start;
+  align-items: flex-start;
+  -webkit-align-content: flex-start;
+  -webkit-align-items: flex-start; }
+
+.align-end {
+  align-content: flex-end;
+  align-items: flex-end;
+  -webkit-align-content: flex-end;
+  -webkit-align-items: flex-end; }
+
+.align-center, .artist-container .inner-container .letter-wrapper {
+  align-content: center;
+  align-items: center;
+  -webkit-align-content: center;
+  -webkit-align-items: center; }
+
+.wrap, .artist-container .inner-container .artist-wrapper .artist-inner-wrapper {
+  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap; }
+
+.direction-column {
+  flex-direction: column;
+  -webkit-flex-direction: column; }
+
+.ellipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  word-break: none; }
+
+/* ARTIST CONTAINER *********************************************/
+.artist-container {
+  position: fixed;
+  z-index: 60;
+  width: 100%;
+  height: calc(100% - 60px);
+  width: 100% !important;
+  background: rgba(51, 51, 51, 0.95);
+  top: 60px;
+  left: 0;
+  transition: 0.4s; }
+  .artist-container .inner-container {
+    background: #fafafa;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    /** Subcontenedor de letras **/
+    /** Subcontenedor de artistas **/ }
+    .artist-container .inner-container .letter-wrapper {
+      @extends .wrap;
+      width: 100%;
+      padding: 10px 40px;
+      height: 60px;
+      background: #281E42;
+      position: relative;
+      z-index: 20;
+      /** cada letra **/ }
+      .artist-container .inner-container .letter-wrapper .letter {
+        opacity: 0.7;
+        width: 45px;
+        height: 45px;
+        font-size: 15px;
+        font-weight: 400;
+        cursor: pointer;
+        text-align: center;
+        color: white;
+        line-height: 45px;
+        border-radius: 50%; }
+        .artist-container .inner-container .letter-wrapper .letter:hover {
+          opacity: 1;
+          font-weight: 400 !important; }
+        .artist-container .inner-container .letter-wrapper .letter.selectLetter {
+          opacity: 1 !important;
+          background: rgba(10, 10, 10, 0.2);
+          font-weight: 400 !important;
+          color: #FFC10D; }
+    .artist-container .inner-container .artist-wrapper {
+      position: relative;
+      z-index: 19;
+      overflow: hidden;
+      width: 100% !important;
+      height: calc(100% - 60px);
+      padding: 0;
+      margin: 0;
+      border-radius: 0 !important; }
+      .artist-container .inner-container .artist-wrapper .artist-inner-wrapper {
+        overflow: auto !important;
+        height: 100%;
+        padding: 40px 50px 20px 50px;
+        width: 100% !important;
+        border: none !important;
+        border-radius: 0 !important;
+        /* Cada artista **/ }
+        .artist-container .inner-container .artist-wrapper .artist-inner-wrapper .artist {
+          width: 160px;
+          cursor: pointer;
+          padding: 20px;
+          border-radius: 5px;
+          border: solid 1px transparent; }
+          .artist-container .inner-container .artist-wrapper .artist-inner-wrapper .artist .circle {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border: solid 1px #ccc;
+            margin-bottom: 15px; }
+          .artist-container .inner-container .artist-wrapper .artist-inner-wrapper .artist .name {
+            text-align: center;
+            font-size: 13px;
+            color: #333;
+            font-weight: 400;
+            text-transform: uppercase; }
+          .artist-container .inner-container .artist-wrapper .artist-inner-wrapper .artist:hover {
+            background: #fcfcfc; }
+            .artist-container .inner-container .artist-wrapper .artist-inner-wrapper .artist:hover .name {
+              color: #281E42; }
+
+/*# sourceMappingURL=artist-container.css.map */

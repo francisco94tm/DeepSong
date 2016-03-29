@@ -1,0 +1,306 @@
+@import 'variables';
+@import 'artist-container';
+@import 'favorite-container'; 
+
+ 
+	
+/** NAVBAR DEFAULT******************************************************************************/
+
+.navbar{  
+	width: 100%;
+	left:0px;	 
+	top: 0px;
+	z-index: 45;  
+	position: fixed;
+
+	
+	.nav-buttons{
+		margin: 0 10px;
+		
+		.btn{			
+			width: 100px;
+			height: 60px;
+			margin: 0;		
+			transition: 0.3s;	
+
+			i:before{
+				font-size: 20px;
+				line-height: calc(60px - 3px);
+			}
+ 
+		}
+		
+	}
+}
+	 
+		
+.navbar-wrapper{ 
+	width: 100%; 
+	position: fixed;
+	top: 0;
+	left: 0;  
+	@extend .align-center; 
+	z-index: 30;		 
+	@extend .flex;
+	@extend .space-between;
+	height: 60px;
+	background: $accent;
+	transition: 0.3s;
+	@extend .shadow-2-5;
+	
+	.top{ 
+		color: white;  
+		font-weight: 400; 
+		font-family: "Roboto","Arial",sans-serif; 
+		text-align: center;  
+		padding: 0 10px; 
+		position: relative;
+		text-transform: uppercase;   
+		
+			@extend .flex; 
+			@extend .align-center;
+		
+		.menu{ 
+			width: 90px;
+			height: 60px; 
+			color: white;
+			cursor: pointer; 
+			line-height: 60px;
+			text-align: center;
+			margin: 0 10px; 
+			transition: 0.3s;
+			
+			span:before{
+				transition: 0.3s;
+			}
+			
+			&:hover span:before{
+				font-size: 16px!important;
+			}
+		}
+		
+		.back-logo{			
+			width: 100%; 
+			position: absolute;
+			left: 0;
+			top: 0;
+			z-index: 9; 
+		}
+		
+		.text{ 
+			color: white;
+			text-transform: uppercase;
+			font-weight: 100;
+			font-size: 25px;
+			transition: 0.3s;
+			cursor: pointer; 
+			width: 140px;
+			height: 60px;
+			line-height: 60px;
+			
+			&:hover{
+				font-size: 22px;
+			}
+			
+			b{
+				font-weight: 400;
+			}
+		}
+	}
+	
+	.logo-not-begginning{
+		font-size: 45px!important; 
+		background-attachment: scroll!important;
+	}
+}  
+
+
+ 
+	/** Botones de navegación*/
+	
+	.navbar .nav-buttons{  
+		height: 100%; 
+		@extend .flex;   
+		@extend .space-between;
+		@extend .align-end; 
+		
+		.btn{ 
+			cursor: pointer;
+			display: inline-block; 
+			text-align: center;  
+			border-top: solid 3px transparent;
+			color: white;
+			
+			i:before{			 					 
+				transition: 0.3s;
+			}
+			
+			&:hover{   
+				border-top: solid 3px white;
+			}
+		} 
+	}
+	  
+	/** Se dió clic en un boton de la barra de navegación */
+	
+	.navbutSelected{  
+		border-top: solid 5px $accent-complementary!important;
+		
+		i:before{  
+			font-family: "Flaticon";
+			content: "\e017";
+		}
+	}
+		 
+		 
+
+/* Contenedor prncipal para opciones de la barra de navegacion*/		
+.nav-buttons-container{	
+	height: 0px;
+	width: 100%;
+	background: #eee;	 
+	z-index: 11;
+	position: fixed;
+	overflow: hidden;
+	@extend .shadow-2-5;
+}
+ 
+ 
+ 
+ /** NAVBAR DEFAULT******************************************************************************/
+
+ $width-sidebar: 250px;
+ 
+ .side-menu{
+	 	 
+	 width:  $width-sidebar;
+	 height: 100%;
+	 position: fixed;
+	 background: $accent;
+	 top: 0;
+	 left: -($width-sidebar);
+	 z-index: 50;
+	 @extend .shadow-3-10;
+	 transition: 0.4s;
+
+	.top{
+		position: absolute;
+		z-index: 50;
+		opacity: 0.3;
+		width: 100%;
+		height: 100%;
+		background: #000;		
+	}
+	 
+	 .close-btn {
+		 
+		 color: white;
+		 float: right;
+		 display: block;
+		 width: 60px;
+		 line-height: 60px; 
+		 cursor: pointer;
+		 text-align: center;
+		 z-index: 51;
+		 position: relative;
+		 
+		 i{
+			 &:before{
+				transition: 0.3s;
+			 }
+		 }
+		 
+		 &:hover{
+			 i:before{
+				font-size: 16px!important;
+			 }
+		}
+	 }
+	 
+	 .btn-container{ 
+		  @extend .direction-column; 
+		  @extend .flex;
+		  @extend .space-between;
+		  width: 100%;
+		  height: calc(100% - 60px);
+		  z-index: 51;
+		  position: relative;
+		
+		 .top-btn{ 
+		 }
+		 
+		 .bottom-btn{ 
+		 }
+		
+		   .btn{
+			 color: white;
+			 width: 100%;
+			 height: 60px;
+			 cursor: pointer;
+			 line-height: 60px;
+			 padding: 0 30px;
+			 @extend .flex;
+			 @extend .align-center;
+			 
+			 
+			 
+			 .circle.artistImg{ 
+				border-radius: 50%;
+				width: 40px; 
+				margin: 0 20px 0 -10px;
+				height: 40px;
+				background-position: center center;
+				background-size: cover; 
+			}
+			 
+
+			 i{
+				 width: 50px;
+				 height: 60px;
+				 display: inline-block;
+				 line-height: 60px;
+			 }
+			 
+			 &:hover{
+				 background: rgba(0,0,0,0.2);
+			 }
+		 }
+	 }
+	
+	 
+}
+ 
+.expand_menu {
+	left: 0!important;
+}
+
+.body_expand_menu {
+	margin-left:  $width-sidebar!important; 
+}
+
+.navbar_expand_menu{ 
+	padding-left: (($width-sidebar) - 50px)!important;
+	
+	.menu{
+		opacity: 0;
+	}
+}
+	
+	
+	.selected_btn{
+		border-left: solid 3px $accent-complementary;
+		color: $accent-complementary!important;
+	}
+		      
+/** MEDIA SCREEN 900PX ---------------------------------------------------------*/
+	
+	@media screen and (max-width:900px){
+		
+		.letter-wrapper .letter{			 
+			display: none;
+		}		
+		
+		.selectLetter{
+			display: block!important;
+		}
+	}	 

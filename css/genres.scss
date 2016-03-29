@@ -1,0 +1,40 @@
+		
+		$genre_array: (
+			(alternative,#478903,	Unknown)
+			(blues,		 #82B8FF,	Light Blue)
+			(classical,	 #F3DCA7,	Peach)
+			(downtempo,	 #567432,	Peach)
+			(electronic, #55F3FF, 	Cyan)
+			(experimental,#6DD47C,	Light Green)
+			(folk, 		 #A1674B,	Brown)
+			(hardcore,	 #9B000B,	Cherry)
+			(hiphop,	 #E04402,	Orange)
+			(indie,	     #824EFF,	Light Purple)
+			(industrial, #5C5C5C,	Dark Gray)
+			(jazz, 		 #F4FF5A, 	Yellow)
+			(lofi, 		 #E09000,	Yellow)
+			(mathrock,	 #70B802,	Grass)
+			(pop,		 #DE27AA, 	Pink)
+			(postpunk,	 #8C3DC7,	Purple)
+			(postrock,	 #989896,	Mango)
+			(punk,		 #70B802,	Grass)
+			(randb_soul, #DE272D,	Red)
+			(rock, 		 #FF2B25, 	Red) 
+			(shoegaze,   #E09000,	Unknown)
+			(trip-hop,	 #E09000,	Yellow)			
+		);
+		
+		
+		/*Aplica el color segun el genero 
+		*/		
+		@each $genre_def in $genre_array{
+			$genre:   nth($genre_def, 1);
+			$colour:  nth($genre_def, 2);			
+			$comment:  nth($genre_def, 3);
+			
+			.genre.#{$genre}:hover{
+				color: $colour!important;
+				/* #{$comment}*/
+			}
+		}   
+		 

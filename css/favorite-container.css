@@ -1,0 +1,151 @@
+/*********** COLORS **********/
+/** Complementary colors **/
+/*********** VARIABLES **********/
+/*********** SHADOOWS **********/
+.shadow-3-10, .favorite-container .options {
+  -webkit-box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.38);
+  -moz-box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.38);
+  box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.38); }
+
+.shadow-2-5, .favorite-container .favorite-inner-wrapper .favorite .cover {
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.38);
+  -moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.38);
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.38); }
+
+/********** BLUR **********/
+/*********** FLEX **********/
+.flex, .favorite-container .favorite-inner-wrapper, .favorite-container .favorite-inner-wrapper .favorite, .favorite-container .favorite-inner-wrapper .favorite .cd {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex; }
+
+.start {
+  justify-content: flex-start;
+  -webkit-justify-content: flex-start; }
+
+.end {
+  justify-content: flex-end;
+  -webkit-justify-content: flex-end; }
+
+.space-between {
+  justify-content: space-between;
+  -webkit-justify-content: space-between; }
+
+.center, .favorite-container .favorite-inner-wrapper {
+  justify-content: center;
+  -webkit-justify-content: center; }
+
+.align-start {
+  align-content: flex-start;
+  align-items: flex-start;
+  -webkit-align-content: flex-start;
+  -webkit-align-items: flex-start; }
+
+.align-end {
+  align-content: flex-end;
+  align-items: flex-end;
+  -webkit-align-content: flex-end;
+  -webkit-align-items: flex-end; }
+
+.align-center {
+  align-content: center;
+  align-items: center;
+  -webkit-align-content: center;
+  -webkit-align-items: center; }
+
+.wrap, .favorite-container .favorite-inner-wrapper {
+  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap; }
+
+.direction-column, .favorite-container .favorite-inner-wrapper .favorite {
+  flex-direction: column;
+  -webkit-flex-direction: column; }
+
+.ellipsis, .favorite-container .favorite-inner-wrapper .favorite .info .name, .favorite-container .favorite-inner-wrapper .favorite .info .artist {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  word-break: none; }
+
+/* FAVORITE CONTAINER *********************************************/
+.favorite-container {
+  position: fixed;
+  z-index: 50;
+  width: 100%;
+  height: calc(100% - 60px);
+  background: white;
+  top: 60px;
+  left: 0;
+  transition: 0.4s; }
+  .favorite-container .options {
+    height: 60px;
+    line-height: 50px;
+    background: #281E42;
+    padding-left: 8vw;
+    font-family: "Roboto";
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+    text-transform: uppercase;
+    padding-bottom: 15px;
+    cursor: default;
+    position: relative; }
+
+.favorite-container .favorite-inner-wrapper {
+  padding: 50px 50px 30px 50px;
+  height: calc(100% - 50px);
+  overflow: auto !important;
+  margin: -10px auto 0 auto;
+  z-index: 19;
+  position: relative; }
+  .favorite-container .favorite-inner-wrapper .favorite {
+    width: 250px;
+    height: 300px;
+    padding: 0 20px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    position: relative;
+    border: solid 1px transparent;
+    cursor: pointer; }
+    .favorite-container .favorite-inner-wrapper .favorite .number {
+      width: 30px;
+      line-height: 70px;
+      font-weight: 300;
+      font-size: 30px;
+      text-align: center;
+      color: #281E42;
+      transition: 0.3s; }
+    .favorite-container .favorite-inner-wrapper .favorite .cd {
+      position: relative; }
+    .favorite-container .favorite-inner-wrapper .favorite .cover {
+      background-size: cover;
+      width: 200px;
+      height: 200px;
+      background-position: center center; }
+    .favorite-container .favorite-inner-wrapper .favorite .info {
+      width: 200px;
+      height: 80px;
+      transition: 0.3s;
+      padding: 20px; }
+      .favorite-container .favorite-inner-wrapper .favorite .info .name {
+        font-size: 16px;
+        font-weight: 400;
+        color: #333;
+        width: 100%; }
+      .favorite-container .favorite-inner-wrapper .favorite .info .artist {
+        font-size: 12px;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: #888;
+        width: 100%; }
+    .favorite-container .favorite-inner-wrapper .favorite:hover {
+      /*border: solid 1px $accent;*/
+      background: #fcfcfc; }
+      .favorite-container .favorite-inner-wrapper .favorite:hover .artist {
+        color: #281E42 !important; }
+
+/*# sourceMappingURL=favorite-container.css.map */

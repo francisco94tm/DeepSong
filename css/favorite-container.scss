@@ -1,0 +1,117 @@
+@import 'variables';
+
+	/* FAVORITE CONTAINER *********************************************/	
+	.favorite-container{
+		position: fixed;
+		z-index: 50;
+		width: 100%;
+		height: calc(100% - 60px);
+		background: white;
+		top: 60px;
+		left: 0; 
+		transition: 0.4s;
+		
+		.options{
+			height: 60px;
+			line-height: 50px;
+			background: $accent;  
+			padding-left: 8vw;
+			font-family: "Roboto"; 
+			font-weight: 400; 
+			letter-spacing: 1px;
+			font-size: 14px;  
+			color: rgba(255,255,255,0.8);	
+			text-transform: uppercase;		
+			@extend .shadow-3-10;
+			padding-bottom: 15px;
+			cursor: default;
+			position: relative; 
+		}
+	}
+	  
+	.favorite-container .favorite-inner-wrapper{
+		padding: 50px 50px 30px 50px;
+		height: calc(100% - 50px);
+		overflow: auto!important;
+		margin: -10px auto 0 auto; 		
+		@extend .flex;
+		@extend .center;
+		@extend .wrap;
+		z-index: 19;		
+		position: relative;
+		 
+		 
+		.favorite{ 			
+			width: 250px;
+			height: 300px;
+			padding: 0 20px;
+			margin-bottom: 20px; 
+			@extend .flex;
+			@extend .direction-column;	
+			border-radius: 4px;
+			position: relative; 
+			border: solid 1px transparent;
+			cursor: pointer; 
+
+			
+			
+			.number{
+				width: 30px; 			 
+				line-height: 70px;
+				font-weight: 300;
+				font-size: 30px;   
+				text-align: center; 			  		
+				color: $accent; 			
+				transition: 0.3s; 	 	
+			}
+			
+			.cd{  
+				position: relative;  
+				@extend .flex;
+			}
+			
+			.cover{
+				background-size: cover;
+				width: 200px;
+				height: 200px;  
+				background-position: center center; 
+				@extend .shadow-2-5;
+			}
+ 
+			
+			.info{ 
+				width: 200px;
+				height: 80px;  
+				transition: 0.3s;
+				padding: 20px;
+				
+				.name{
+					font-size: 16px;
+					font-weight: 400; 
+					color: #333;			
+					width: 100%;
+					@extend .ellipsis;	
+				}
+				
+				.artist{
+					font-size: 12px;
+					font-weight: 400;
+					text-transform: uppercase;
+					letter-spacing: 1px;
+					color: #888; 
+					width: 100%;
+					@extend .ellipsis;
+				} 
+			}
+				
+			&:hover{ 
+				/*border: solid 1px $accent;*/
+				background: #fcfcfc;
+				
+				.artist{  
+					color: $accent!important;
+				} 
+			}
+		}
+		
+	}   

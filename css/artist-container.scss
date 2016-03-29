@@ -1,0 +1,143 @@
+@import 'variables';
+	
+	/* ARTIST CONTAINER *********************************************/ 
+	 
+	
+	.artist-container{
+		position: fixed;
+		z-index: 60;
+		width: 100%;
+		height: calc(100% - 60px);
+		width: 100%!important;
+		background: rgba(#333, 0.95);
+		top: 60px;
+		left: 0; 
+		transition: 0.4s;
+		
+		
+		.inner-container{ 
+			background: #fafafa;
+			height: 100%;
+			width: 100%;  
+			position: relative;
+			
+			/** Subcontenedor de letras **/
+			.letter-wrapper{ 
+				@extend .flex;		
+				@extend .align-center;
+				@extend .center;
+				@extends .wrap; 
+				width: 100%;
+				padding: 10px 40px; 	
+				height: 60px;
+				background: $accent; 
+				position: relative;
+				z-index: 20;
+				@extend .shadow-3-10;
+				
+				/** cada letra **/
+				.letter{
+					opacity: 0.7;
+					width: 45px;
+					height: 45px;
+					font-size: 15px;
+					font-weight: 400;
+					cursor: pointer;  
+					text-align: center;
+					color: white;
+					line-height: 45px;			
+					border-radius: 50%;
+					
+					&:hover{  
+						opacity: 1; 
+						font-weight: 400!important;
+					}
+					
+					&.selectLetter{
+						opacity: 1!important; 
+						background: rgba(10,10,10,0.2);
+						font-weight: 400!important; 
+						color: $accent-complementary;
+					}
+				}
+			} 
+					
+			/** Subcontenedor de artistas **/
+			.artist-wrapper{
+				position: relative;  
+				z-index: 19;
+				overflow: hidden; 
+				width: 100%!important;
+				height: calc(100% - 60px);
+				padding: 0;
+				margin: 0; 
+				border-radius: 0!important;
+				
+				.artist-inner-wrapper{			
+					overflow: auto!important;
+					height: 100%;  
+					padding: 40px 50px 20px 50px; 
+					@extend .flex;  
+					@extend .align-start;
+					@extend .center;
+					@extend .wrap; 
+					width: 100%!important;
+					border: none!important;
+					border-radius: 0!important;
+					
+					
+					/* Cada artista **/
+					
+					.artist{			 
+						width: 160px; 
+						cursor: pointer;
+						padding: 20px; 
+						border-radius: 5px;
+						border: solid 1px transparent;	 
+						
+						
+						.circle{
+							width: 120px;
+							height: 120px;
+							border-radius: 50%; 
+							background-position: center center;
+							background-repeat: no-repeat;
+							background-size: cover;
+							border: solid 1px #ccc; 
+							margin-bottom: 15px; 
+						}
+						
+						.name{ 
+							text-align: center; 
+							font-size: 13px; 
+							color: #333;
+							font-weight: 400;
+							text-transform: uppercase;
+						}
+						
+						
+						&:hover{  
+							background: #fcfcfc;
+
+							.name{
+								color: $accent; 
+								
+							}						
+						}
+						
+						  
+					}
+				}
+			}
+			
+			
+		} 
+		
+	  
+	}
+	
+	
+	
+	
+	 
+	

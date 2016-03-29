@@ -1,0 +1,228 @@
+@import 'variables';
+
+html, body{
+	width: 100%;
+	height: 100%;
+	margin: 0;  
+}
+
+*{ 	 
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;	
+}
+ 
+
+body{  
+	position: relative;
+	font-family: "Roboto","Arial",sans-serif; 
+}
+
+.error-alert{
+	width: 300px;
+	height: auto;
+	position: fixed;
+	z-index: 100;
+	background: #333;
+	color: white;
+	padding: 30px;
+	bottom: 50px;	
+	left: 50px;
+	@extend .shadow-3-10;
+}
+
+.navbar{
+	width: 100%;
+	height: 100px;
+	background: #222;	
+	@extend .flex;
+	padding: 0 50px;
+	@extend .shadow-3-10;
+	z-index: 30;
+	position: fixed;
+	
+	.logo{ 
+
+		color: white;	
+		text-transform: uppercase; 
+		font-size: 30px; 
+		cursor: default;
+		font-weight: 400; 
+		line-height: 100px;  
+		position: relative;
+		
+		.text{ 
+			span{
+				font-weight: 100;
+			} 
+		}
+	}
+	
+	.more{
+		color: white;
+		line-height: 100px;
+		width: 60px;
+		text-align: center;
+		cursor: pointer;
+	}
+}
+
+.img-back, .img-back-top{
+	width: 110%;
+	height: calc(110% - 100px);
+	position: fixed;
+	top: calc(100px - 5%);
+	left: -5%;
+	
+}
+
+.img-back{
+	
+	background-size: cover;
+	background-repeat: no-repeat;  
+	background-position: center center;
+	z-index: -1;
+	@include blur(10px);
+}
+
+.img-back-top{
+	background-color: #111;
+	z-index: 0;
+	opacity: 0.6;
+}
+
+.card-wrapper{
+	position: absolute;
+	z-index: 20; 
+	top: 100px;
+	padding: 50px;
+	width: 100%;
+	@extend .flex;
+	@extend .wrap;
+	@extend .end;
+	
+	.card{
+		
+		cursor: default;
+		width: 350px;
+		padding: 30px;
+		margin: 10px;
+		background: white;
+		@extend .shadow-3-10;
+		text-align: center;
+		
+		.info{
+			margin-top: 20px;
+			text-transform: uppercase;
+			font-size: 14px;
+			font-weight: 700;
+		}   
+	} 
+}
+
+
+	form[name = login]{
+		
+		z-index: 1;
+		position: relative;
+		width: 100%; 
+		@extend .flex;		
+		@extend .end;
+		@extend .align-center; 
+		
+		input{
+			border: none;
+			outline: none;
+			margin: 10px;
+			width: 200px;
+			font-family: "Roboto";	
+			transition: 0.3s;
+			
+			&[type = text], &[type = password], &[type = email]{
+				background: transparent;	
+				font-weight: 400;
+				border-bottom: solid 1px rgba(white, 0.9); 
+				color: white;
+				font-size: 15px;					
+				padding: 10px 10px;
+			}
+			
+			&[type = submit]{
+				background: transparent;
+				border: solid 1px  rgba(255,255,255,0.7);	
+				border-radius: 40px;
+				color: white;
+				font-weight: 700;
+				text-transform: uppercase;
+				font-size: 12px;
+				cursor: pointer;
+				width: 150px;
+				padding: 10px; 
+				
+				&:hover{
+					background: white;
+					color: #111;
+				}
+			}
+			
+			&:focus, &:link{
+				color: white!important;
+			}
+			
+			&::-webkit-input-placeholder { 
+				color: rgba(white, 0.4);
+			}
+			
+			&:-webkit-autofill {
+				-webkit-box-shadow: 0 0 0 1000px #222 inset;
+				color: #fff !important;
+			}
+		}
+	}
+
+
+	form[name = register]{
+		padding-top: 30px; 
+		z-index: 20;
+		background: transparent;
+		@extend .flex;
+		@extend .direction-column; 	
+		background: white;
+		transition: 0.2s;
+		
+		
+		input{
+			display: block;
+			background: transparent;
+			padding: 10px 20px!important;
+			font-size: 16px;
+			border: none;
+			width: calc(100% - 60px);
+			color: #111;
+			font-family: "Roboto";
+			border-bottom: solid 1px #ccc;
+			margin: 10px 20px;
+			outline: none;
+			
+			&::-webkit-input-placeholder { 
+				color: rgba(black, 0.5);
+			} 
+			
+			&[type = submit]{
+				margin-top: 20px!important;
+				width: 100%;
+				border: none; 
+				color: $accent;
+				padding: 20px!important;
+				cursor: pointer;
+				text-transform: uppercase;
+				font-size: 14px;
+				font-weight: 700; 
+				margin: 0;
+				
+				&:hover{
+					
+				}
+			}
+		}
+	}

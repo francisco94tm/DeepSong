@@ -1,0 +1,531 @@
+@import 'variables';
+@import "cd_simple";
+
+html, body{
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	font-family: "Roboto";
+	@extend .flex; 
+	transition: 0.4s;
+	overflow-x: hidden;
+
+}
+
+*{ 	 
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;	
+}
+ 
+ 
+/* BARRA LATERAL --------------------------------------------------------------------*/
+$leftbar: 300px;
+
+.left-bar{  
+	width: $leftbar; 
+	min-width: $leftbar;
+	height: 100%;
+	top: 0;
+	left: 0;
+	padding-top: 120px;  
+	overflow: hidden;
+	position: relative;
+	background-size: cover;
+	background-position: center center;
+	
+	@extend .flex;
+	@extend .direction-column;
+	@extend .align-center;
+	@extend .start;
+	 
+	overflow: hidden; 
+	z-index: 20;
+	
+		.circle{
+			width: 180px;
+			height: 180px;  
+			margin-bottom: 30px;
+			border-radius: 50%;
+			background-position: center center;
+			background-size: cover; 
+			z-index: 3; 
+			position: relative;
+			border: solid 1px #eee;			
+		}
+		
+		 .top{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			z-index: 2;  
+			transition: 0.1s;
+			top: 0;
+			left: 0;  
+			
+			$gradient: linear-gradient(to right, rgba((#fafafa),(0.80)), rgba((#fafafa),(1)));
+			
+			background: $gradient;
+			background: -o-$gradient;
+			background: -webkit-$gradient;
+			background: -moz-$gradient;
+		}
+		
+		.name{ 
+			color: #333;
+			font-size: 20px;
+			text-transform: uppercase;  
+			font-weight: 400; 
+			z-index: 3; 
+			position: relative;
+		}
+		
+		.country{
+			color: #aaa;
+			font-size: 13px;
+			text-transform: uppercase; 
+			text-align: center; 
+			font-weight:400; 
+			z-index: 3; 
+			position: relative;
+		}
+		 
+		.description{
+			color: #333; 
+			padding: 30px;
+			z-index: 3; 
+			position: relative;
+			width: 100%;
+			text-align: center;
+			word-break: break-word;
+		}
+} 
+	
+ 
+	
+	img#test{
+		display: none;
+	}
+
+	
+$height_navbar: 60px;
+ 
+.content{  
+ 
+	position: relative; 
+	min-height: 100%; 
+	overflow-y: auto;
+	padding: 100px 30px 30px 30px;
+	background: #fafafa; 
+	
+
+	/* BOTON PARA SUBIR MATERIAL ------------- */
+	.input-songs{				
+		width: 0.1px;
+		height: 0.1px;
+		opacity: 0;
+		overflow: hidden;
+		position: absolute;
+		z-index: -1;   
+		display: block;
+	}
+
+	.cd-wrapper .cd .artist{
+		display: none;
+	}
+	
+	.label-songs{		 
+		display: block;
+		width: 300px;
+		height: 70px;
+		line-height: 65px!important;
+		font-weight: 400;
+		text-transform: uppercase;
+		font-size: 17px;
+		color: #444;
+		text-align: center; 
+		cursor: pointer;
+		border-radius: 70px;
+		margin-left: calc(100% - 350px); 
+		border: solid 1px #ccc;		
+		margin-bottom: 40px; 
+		transition: 0.3s;
+
+		&:before{
+			font-family: "Flaticon";
+			content: "\e03d";
+			font-size: 24px;
+			margin-right: 20px;
+			font-weight: 300; 
+		}
+
+		&:hover{
+			color: white!important;
+			@extend .shadow-2-5;
+			font-weight: 300!important; 
+		}
+	}
+ 
+
+	/* Contener de la ventana para subir material -----------*/
+	.submit-material-wrapper{ 
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		z-index: 50;
+		top: 0;
+		left: 0;
+		background: rgba(#333, 0.9);
+		display: none;
+
+		/* Ventana para subir material -----------*/
+		.submit-material-window{
+			width: 600px;  
+			height: 90vh;
+			margin: 5vh auto;
+			background: white;
+			position: relative;
+			@extend .shadow-3-10; 
+			overflow: auto;  
+
+			#top{
+				background-color: #222;
+				width: 600px;
+				heigth: 60px;
+				color: white;
+				position: fixed;
+				z-index: 60; 
+				@extend .flex; 
+
+				#title{ 
+					width: calc(100% - 50px);
+					display: inline-block; 
+					padding: 0 30px;
+					line-height: 50px;
+				}
+
+				#close{
+					cursor:pointer;   
+					width: 50px;
+					height: 50px; 
+					display: inline-block;
+					line-height: 50px;
+					text-align: center;
+				}
+			}
+
+			#send{
+				background: #333;
+				color: white;
+				border-radius: 50%;
+				width: 80px;
+				text-align: center;
+				line-height: 80px;
+				height: 80px;
+				@extend .shadow-3-10;
+				position: fixed;
+				margn-top: 0;
+				z-index: 53;
+				cursor: pointer;
+				margin-left: 550px;
+				margin-top: 76vh;
+				
+				i:before{
+					font-size: 30px;
+				}
+			}
+ 
+			input{
+				font-family: "Roboto";
+				padding: 15px 20px;
+				background-color: transparent;
+				border: none;
+				display: block;
+				outline: none;
+				border-bottom: solid 1px transparent;
+				transition: 0.2s;
+
+				&:focus{
+					border-bottom: solid 1px #ccc;
+				}
+			}
+
+				#test2{
+					display: none;
+				}
+
+				.tag{
+					width: 33.3%;
+					display: inline-block;
+					font-size: 13px;
+					letter-spacing: 1px;
+					color: #666;
+					text-align: center;
+				
+					&.ico{ 
+						width: 100%;
+
+						& span:before{
+							font-size: 60px;
+							line-height: 80px;
+						}
+					}
+				}
+
+				textarea{
+					width: 90%;
+					margin: 40px auto 40px auto;
+					display: block;
+					height: 150px;
+					font-family: "Roboto";
+					padding: 20px;
+				}
+
+				.tag-video, #album-video{
+					width: 90%; 
+					margin: 0 auto!important;
+					text-align: center;
+					display: block;
+					margin: 30px auto 100px auto;
+				}
+
+				#album-video{
+					font-size: 26px;
+					font-weight: 300;
+
+					&::-webkit-input-placeholder {
+					 	color:#999; 
+					 	font-style: italic;
+					}
+
+					&::-moz-placeholder{
+						color:#999;
+						font-style: italic;
+					}
+				}
+
+				#album-title{
+					position: relative;
+					z-index: 51;
+					font-size: 30px;
+					margin: 0 auto;
+					font-weight: 400;   
+					width: 90%;
+					margin: 0 auto;
+					border: none;
+					outline: none;  
+					background-color: transparent;
+					color: white; 
+					padding-top: 380px;
+					margin-bottom: 60px;
+				}
+
+				#album-year, #album-genre, #album-price{
+					border: none;
+					display: inline-block;
+					width: 33.3%;
+					text-align: center;
+					padding: 20px;
+					margin-bottom: 30px;
+					font-size: 25px;
+					font-weight: 300;
+					transition: 0.2s;
+				}
+ 
+				.cover{
+					position: absolute;
+					z-index: 50;
+					width: 100%;
+					height: 450px;
+					display: block;  
+					@extend .shadow-2-5;
+					background-size: cover;
+					margin-top: 50px;
+				}
+
+				.cover-top{
+					position: absolute;
+					z-index: 50;
+					width: 100%;
+					height: 450px; 
+					display: block; 
+					background: linear-gradient(rgba(#111,0.1), rgba(#111,0.8));
+			 
+				}
+ 
+				.song_header{
+
+					position: relative;
+					z-index: 51;
+					width: 100%; 
+					@extend .flex;
+					font-size: 14px;
+					margin-top: 40px;
+					background-color: #ddd!important;
+
+					input{
+						font-weight: 400;
+						letter-spacing: 1px;
+						text-align: left;
+						background-color: none; 
+
+						&:nth-child(1){
+							width: 60px;  
+						}
+						&:nth-child(2){
+							width: calc(100% - 240px);
+						}
+
+						&:nth-child(3), &:nth-child(4){
+							width: 100px;
+						}
+
+						&:nth-child(3){
+							font-size: 24px;
+							text-align: center;
+						};
+					} 
+				}
+
+				.song{
+					position: relative;
+					z-index: 51;
+					width: 100%; 
+					@extend .flex;
+					font-size: 14px;
+					padding: 0 10px;
+					
+					&:nth-child(odd){
+						background-color: #fafafa;
+					}
+ 					
+ 					&:nth-last-child(3){
+ 						margin-bottom: 50px;
+ 					}
+
+ 
+
+					.track{
+						width: 60px; 
+						font-weight: 300; 
+					}
+
+					.name{
+						width: calc(100% - 220px);
+					}
+
+					.length, .price{
+						width: 80px;
+					}
+
+					.price{
+						&:before {
+							content: "<div>66</div>";
+						}
+					}
+				}
+			
+		} 
+	}
+	
+	h1{  
+		font-weight: 400;
+		text-transform: uppercase; 
+		font-size: 16px;  
+		letter-spacing: 1px;  
+		display: inline-block; 
+	} 
+}
+
+	/* Texto que muestra que no tiene ningun CD (OCULTAR) -----------------*/
+	 .no-cds{
+		 font-weight: 300;
+		 font-size: 20px;
+		 padding: 40px;
+		 text-align: center;
+		 display: none;
+	 
+	}
+	 
+	/* Contenedor de artistas -----------------*/
+	.artist-wrapper2{
+		position: relative;   
+		margin-top: 20px;
+		padding: 15px 50px; 
+		width: auto; 
+		@extend .flex;
+		@extend .direction-column; 
+
+		
+		.artist-inner-wrapper{
+			overflow: auto; 
+			position: relative; 
+			@extend .flex; 
+			@extend .wrap;
+			
+			.artist{			 
+				width: 200px; 
+				cursor: pointer;
+				padding: 20px 20px 20px 20px; 
+				border-radius: 5px;   
+				margin: 5px;
+				border: solid 1px transparent;
+
+				&:hover{
+					border: solid 1px #ccc;
+				};
+				.name{ 
+					text-align: center; 
+					font-size: 13px; 
+					color: #333;
+					text-transform: uppercase;
+					font-weight: 400;
+				}
+				
+				.circle{
+					width: 150px;
+					height: 150px;
+					border-radius: 50%;
+					margin: 0 auto;
+					background-position: center center;
+					background-repeat: no-repeat;
+					background-size: cover; 			
+					margin-bottom: 15px; 
+					border: solid 1px rgba(20,20,20,0.1);
+					transition: 0.3s;
+				}
+				 
+			}
+		}
+	}
+	
+		 
+			   
+	
+/** MEDIA SCREEN 1200PX ---------------------------------------------------------*/
+	
+	@media screen and (max-width:1200px){ 
+	}
+	
+	
+	
+/** MEDIA SCREEN 900PX ---------------------------------------------------------*/
+	
+	@media screen and (max-width:900px){ 
+		
+		
+	}	
+
+	
+/** MEDIA SCREEN 750PX ---------------------------------------------------------*/
+	
+	@media screen and (max-width:750px){ 
+		 
+		
+	}
+
+/** MEDIA SCREEN 750PX ---------------------------------------------------------*/
+
+ @media screen and (max-width: 500px){
+	  
+ }	
